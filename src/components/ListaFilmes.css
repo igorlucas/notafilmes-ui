@@ -1,0 +1,6 @@
+.filme_item {
+    border: .5px solid black !important;
+    margin: 1rem;
+    border-radius: 1rem;
+    font-size: small;
+}
