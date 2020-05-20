@@ -51,6 +51,10 @@ const FilmeItem = (props) => {
   return (
     <tr>
       <td>{filme.titulo} ({filme.dataLancamento.split('/')[2]})</td>
+      <td><textarea className="form-control" name="comentario" 
+      onChange={(e)=>{
+        setAvaliacao(e.target)
+        }}/></td>
       <td>
         <Box component="fieldset" mb={3} borderColor="transparent">
           <Rating
@@ -63,7 +67,6 @@ const FilmeItem = (props) => {
           />
         </Box>
       </td>
-      <td><textarea className="form-control" name="comentario" onChange={(e)=>{setAvaliacao(e.target)}}/></td>
     </tr>
   );
 }
@@ -78,8 +81,8 @@ const ListFilmesTable = (props) => {
         <thead className="thead-dark">
           <tr>
             <th scope="col">Titulo (Ano)</th>
-            <th scope="col">Nota</th>
             <th scope="col">Comentário</th>
+            <th scope="col">Nota</th>
           </tr>
         </thead>
         <tbody>
